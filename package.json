@@ -2,12 +2,13 @@
     "name": "botbuilder-tools",
     "scripts": {
         "test:travis": "nyc mocha \"@(Chatdown|LUIS|QnAMaker)*/test/*.test.suite.js\" --timeout 10000 && nyc report --reporter=text-lcov | coveralls",
-        "eslint:travis": "eslint \"./**/*.js\""
+        "eslint:travis": "eslint --format 'node_modules/eslint-friendly-formatter' \"./**/*.js\""
     },
     "devDependencies": {
         "coveralls": "^3.0.2",
         "eslint": "^5.2.0",
         "eslint-config-standard": "^11.0.0",
+        "eslint-friendly-formatter": "^4.0.1",
         "eslint-plugin-import": "^2.13.0",
         "eslint-plugin-node": "^7.0.1",
         "eslint-plugin-promise": "^3.8.0",
